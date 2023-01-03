@@ -1,0 +1,17 @@
+.section__error {
+    width: 100%;
+
+    .content__error {
+        width: 100%;
+        height: 100%;
+        padding: 150px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .title__blue {
+            margin-bottom: 50px;
+        }
+    }
+}

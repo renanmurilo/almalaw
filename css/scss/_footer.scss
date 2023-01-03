@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+    background-color: $primary-medium;
+
+    /* ---- COOKIES -----*/
+
+    .box-cookies.hide {
+        display: none !important;
+    }
+
+    .box-cookies {
+        position: fixed;
+        background-color: #333232;
+        width: 100%;
+        z-index: 998;
+        bottom: 0;
+        min-height: 5.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+            padding: 1.25rem 0;
+        }
+
+        .msg-cookies {
+            @include font-rubik(1.25rem, 300);
+            color: $white;
+            max-width: 82%;
+
+            @media ($mobile) {
+                text-align: center;
+                font-size: 13px;
+                width: 100%;
+                max-width: 95%;
+            }
+        }
+
+        .btn__outline__white {
+            text-transform: uppercase;
+
+            @media ($mobile) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    /* ---- COOKIES -----*/
+}

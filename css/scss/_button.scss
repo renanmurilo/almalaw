@@ -1,0 +1,14 @@
+.btn {
+    width: 12.5rem;
+    height: 2.5rem;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__primary {
+        background-color: $primary;
+        color: $white;
+        text-transform: uppercase;
+    }
+}
