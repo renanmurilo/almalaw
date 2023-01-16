@@ -1,6 +1,246 @@
 .footer {
     width: 100%;
-    background-color: $primary-medium;
+    height: 20.375rem;
+
+    @media ($mobile) {
+        height: 100%;
+    }
+
+    .content__footer {
+        width: 100%;
+        padding: 2.375rem 0 3.0875rem;
+
+        @media ($mobile) {
+            padding: 2.4188rem 0 0;
+        }
+
+        .inner__footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+
+            @media ($mobile) {
+                // justify-content: center;
+            }
+
+            .grid__footer {
+                width: 16%;
+                display: flex;
+                flex-direction: column;
+
+                @media ($mobile) {
+                    width: 45%;
+                    margin-bottom: 2.5rem;
+
+                    &:first-child {
+                        width: 100%;
+                    }
+                }
+
+                &:last-child {
+                    width: 29%;
+
+                    @media ($mobile) {
+                        width: 100%;
+                    }
+                }
+
+                .logo {
+                    margin-bottom: 1.8rem;
+                }
+
+                .endereco {
+                    @media ($mobile) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    p {
+                        @include font-roboto(0.75rem, 300);
+                        color: $text;
+                        line-height: 1rem;
+
+                        @media ($mobile) {
+                            font-size: 0.6875rem;
+                            line-height: 1.125rem;
+
+                            &:last-child {
+                                max-width: 9.25rem;
+                            }
+                        }
+
+                        &:first-child {
+                            margin-bottom: 0.7375rem;
+
+                            @media ($mobile) {
+                                margin-bottom: 0;
+                                max-width: 7.5625rem;
+                            }
+                        }
+                    }
+                }
+
+                h3 {
+                    @include font-ubuntu(1.125rem, 300);
+                    color: $primary;
+                    text-transform: uppercase;
+                    line-height: 1.3125rem;
+                    margin-top: 2.5rem;
+                    position: relative;
+
+                    @media ($mobile) {
+                        margin-top: 0;
+                        line-height: 1.125rem;
+                        font-size: 1rem;
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 0.0625rem;
+                        background-color: $primary;
+                        position: absolute;
+                        bottom: -0.5rem;
+                    }
+                }
+
+                .redes__sociais {
+                    margin-top: 2.1187rem;
+                    display: flex;
+                    align-items: center;
+
+                    @media ($mobile) {
+                        margin-top: 0.8562rem;
+                    }
+
+                    a {
+                        &:first-child {
+                            margin-right: 0.8875rem;
+                        }
+                    }
+                }
+
+                .links,
+                .phone {
+                    margin-top: 0.8rem;
+
+                    .link {
+                        @include font-roboto(0.875rem, 300);
+                        color: $text;
+                        line-height: 1.1875rem;
+
+                        @media ($mobile) {
+                            font-size: 0.6875rem;
+                            line-height: 0.9375rem;
+                        }
+                    }
+                }
+
+                .links {
+                    margin-top: 2.1187rem;
+                }
+
+                form {
+                    margin-top: 2.1187rem;
+                    width: 100%;
+
+                    .form__row {
+                        width: 100%;
+
+                        .form__controls,
+                        .wpcf7-form-control {
+                            width: 100%;
+                            position: relative;
+
+                            .wpcf7-spinner {
+                                display: none;
+                            }
+
+                            .field {
+                                background-color: transparent;
+                                border: 0.0625rem solid $border;
+                                height: 2.3125rem;
+                                padding-left: 0.9rem;
+                                width: 100%;
+                                @include font-roboto(0.75rem, 300);
+                                color: $text;
+                            }
+
+
+                            .wpcf7-submit {
+                                position: absolute;
+                                right: 0.5563rem;
+                                border: none;
+                                top: 0;
+                                bottom: 0;
+                                width: 1.5rem;
+                                height: 2.3125rem;
+                                z-index: 1;
+                                margin: 0 auto;
+                                font-size: 0;
+                                background-color: transparent;
+                            }
+
+                            .image {
+                                position: absolute;
+                                right: 0;
+                                width: 1.5rem;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                z-index: 0;
+
+                                &::before,
+                                &::after {
+                                    content: '';
+                                    height: 1rem;
+                                    width: 0.125rem;
+                                    background-color: $primary;
+                                    display: block;
+                                    transform: rotate(-45deg);
+                                    top: 0.3125rem;
+                                    right: -0.125rem;
+                                    position: relative;
+
+                                    @media ($mobile) {
+                                        height: .6rem;
+                                        top: 0.6875rem;
+                                    }
+                                }
+
+                                &::after {
+                                    transform: rotate(45deg);
+                                    top: -1px;
+
+                                    @media ($mobile) {
+                                        top: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 2.4562rem;
+
+        a,
+        p {
+            @include font-roboto(0.75rem, 300);
+            color: $text;
+        }
+
+        a {
+            margin-right: 3.0313rem;
+        }
+    }
 
     /* ---- COOKIES -----*/
 
@@ -10,39 +250,67 @@
 
     .box-cookies {
         position: fixed;
-        background-color: #333232;
+        background-color: $text;
         width: 100%;
         z-index: 998;
         bottom: 0;
-        min-height: 5.875rem;
+        height: 11.875rem;
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
 
-        @media (max-width: 768px) {
-            justify-content: center;
+        @media ($mobile) {
+            justify-content: flex-start;
             padding: 1.25rem 0;
+            height: 12.4375rem;
         }
 
-        .msg-cookies {
-            @include font-rubik(1.25rem, 300);
-            color: $white;
-            max-width: 82%;
+        .container--cookies {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
 
             @media ($mobile) {
-                text-align: center;
-                font-size: 13px;
-                width: 100%;
-                max-width: 95%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
             }
-        }
 
-        .btn__outline__white {
-            text-transform: uppercase;
+            .text {
+                width: 70%;
 
-            @media ($mobile) {
-                margin-top: 20px;
+                @media ($mobile) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                h3 {
+                    @include font-ubuntu(1.625rem, 300);
+                    color: $white;
+                    margin-bottom: 1.25rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        margin-bottom: 0.75rem;
+                    }
+                }
+
+                .msg-cookies {
+                    @include font-roboto(1.25rem, 300);
+                    color: $white;
+                    line-height: 1.5rem;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                    }
+
+                    @media ($mobile) {
+                        text-align: left;
+                        font-size: 0.75rem;
+                        line-height: 1rem;
+                        width: 100%;
+                        margin-bottom: 1.25rem;
+                    }
+                }
             }
         }
     }

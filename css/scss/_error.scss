@@ -4,14 +4,59 @@
     .content__error {
         width: 100%;
         height: 100%;
-        padding: 150px 0;
+        padding: 9.375rem 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
 
-        .title__blue {
-            margin-bottom: 50px;
+        h1 {
+            margin-bottom: 1.875rem;
+            @include font-ubuntu(2.5rem, 300);
+            color: $primary;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            @include font-roboto(1.75rem, 300);
+            color: $text;
+            margin-bottom: 1.875rem;
+        }
+    }
+}
+
+.section__privacidade {
+    width: 100%;
+    padding-top: 4rem;
+
+    .desctiption {
+        width: 100%;
+        white-space: pre-line;
+
+        h1 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $primary;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            @include font-roboto(0.9375rem, 300);
+            color: $text;
+            max-width: 50.1875rem;
+            line-height: 2rem;
+            white-space: pre-line;
+        }
+
+        h3 {
+            @include font-ubuntu(1.6875rem, 300);
+            color: $primary;
+            text-transform: uppercase;
+            margin: 6rem 0 2.5rem;
+        }
+
+        a {
+            color: $primary;
+            text-decoration: underline;
         }
     }
 }

@@ -1,0 +1,782 @@
+.section__institucional {
+    width: 100%;
+    margin-top: 5.5rem;
+
+    @media ($mobile) {
+        margin-top: 3.5rem;
+        position: relative;
+    }
+
+    .content__institucional {
+        width: 100%;
+        display: flex;
+        position: relative;
+
+        @media ($mobile) {
+            flex-wrap: wrap;
+            padding-bottom: 19.1875rem;
+        }
+
+        .description__institucional {
+            width: 100%;
+            max-width: 66.2%;
+
+            @media ($mobile) {
+                max-width: 100%;
+            }
+
+            h1 {
+                @include font-ubuntu(2.5rem, 300);
+                color: $primary;
+                text-transform: uppercase;
+                max-width: 29.875rem;
+                line-height: 2.875rem;
+                margin-bottom: 2rem;
+
+                @media ($mobile) {
+                    font-size: 1.75rem;
+                    line-height: 2rem;
+                    max-width: 17.125rem;
+                }
+            }
+
+            h2 {
+                @include font-ubuntu(1.5rem, 300);
+                color: $primary;
+                margin-bottom: 1.25rem;
+                max-width: 32rem;
+
+                @media ($mobile) {
+                    font-size: 1.125rem;
+                    max-width: 17.625rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                &:nth-child(5) {
+                    max-width: 25rem;
+                }
+            }
+
+            .pre__text {
+                width: 100%;
+                margin-bottom: 4rem;
+
+                @media ($mobile) {
+                    margin-bottom: 2.5313rem;
+                }
+
+                &.first {
+                    margin-bottom: 5rem;
+
+                    @media ($mobile) {
+                        margin-bottom: 4rem;
+                    }
+
+                    p {
+                        line-height: 2rem;
+
+                        @media ($mobile) {
+                            line-height: 1.25rem;
+                        }
+                    }
+                }
+
+                p {
+                    @include font-roboto(15px, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                    }
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .box__purple__desk {
+            width: 24.6875rem;
+            height: 43.8125rem;
+            background-color: $primary;
+            position: absolute;
+            top: 16.0625rem;
+            right: -6rem;
+            z-index: 0;
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .image__desk {
+            position: absolute;
+            top: 18.125rem;
+            right: -8.5rem;
+            z-index: 1;
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+    }
+
+    .box__purple__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            width: 22rem;
+            height: 12.4375rem;
+            background-color: $primary;
+            position: absolute;
+            bottom: 25rem;
+            right: 0;
+            z-index: 0;
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            position: absolute;
+            bottom: 15rem;
+            right: 0;
+            z-index: 1;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    .background__institucional {
+        height: 20.5894rem;
+        background-color: $text;
+        width: 100%;
+        margin-top: 2.5rem;
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-institucional-servicos.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+
+        @media ($mobile) {
+            background-size: 100%;
+            background-position: bottom center;
+            background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-institu.png);
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            padding-top: 7.4375rem;
+
+            p {
+                @include font-ubuntu(2rem, 300);
+                color: $white;
+                max-width: 25.125rem;
+                line-height: 2.5rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    max-width: 15.5rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.section__formacao__institucional {
+    width: 100%;
+    margin: 5.375rem auto 6rem;
+
+    @media ($mobile) {
+        margin: 3.3988rem auto 0;
+        position: relative;
+    }
+
+    .content__formacao {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        @media ($mobile) {
+            flex-wrap: wrap;
+        }
+
+        .image__desk {
+            position: absolute;
+            left: -8.3rem;
+            top: 2.1875rem;
+            z-index: 1;
+
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .box__purple__desk {
+            width: 27.25rem;
+            height: 34.75rem;
+            background-color: $primary;
+            position: absolute;
+            left: -5.2rem;
+            z-index: 0;
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .description__formacao {
+            width: 100%;
+            max-width: 57.2%;
+            margin: auto 0 auto auto;
+
+            @media ($mobile) {
+                max-width: 100%;
+                padding-bottom: 29.89rem;
+                max-width: 18.1875rem;
+            }
+
+            h2 {
+                @include font-ubuntu(1.5rem, 300);
+                color: $primary;
+                text-transform: uppercase;
+                margin-bottom: 1.25rem;
+                margin-top: 4.4375rem;
+
+                @media ($mobile) {
+                    font-size: 1.125rem;
+                    margin-top: 2.9925rem;
+                }
+
+                &.first {
+                    margin-top: 0.625rem;
+
+                    @media ($mobile) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .pre__text {
+                width: 100%;
+
+                p {
+                    @include font-roboto(15px, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+                    white-space: pre-line;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                    }
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            bottom: 3.5rem;
+        }
+    }
+
+    .box__purple__mobile {
+        display: none;
+
+        @media ($mobile) {
+            width: 21.125rem;
+            display: block;
+            height: 19.75rem;
+            background-color: $primary;
+            position: absolute;
+            left: 0;
+            bottom: 6.1563rem;
+            z-index: 0;
+        }
+    }
+}
+
+.section__historia__institucional {
+    width: 100%;
+    position: relative;
+    height: 78.0544rem;
+
+    @media ($desktopLarge) {
+        height: 85.0544rem;
+    }
+
+    @media ($mobile) {
+        height: 74rem;
+    }
+
+    &::before {
+        content: '';
+        background-color: $primary;
+        height: 78.0544rem;
+        width: 65.75rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+
+        @media ($desktopLarge) {
+            height: 85.0544rem;
+            width: 85.75rem;
+        }
+
+        @media ($mobile) {
+            width: 21.125rem;
+            height: 69.5rem;
+        }
+    }
+
+    &::after {
+        content: '';
+        background: url(http://almalaw.local/wp-content/uploads/2023/01/background-institucional-historia.png)no-repeat center;
+        background-size: contain;
+        width: 33.0625rem;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 22rem;
+        height: 19.6875rem;
+
+        @media ($desktopLarge) {
+            bottom: 30rem;
+        }
+
+        @media ($mobile) {
+            display: none;
+        }
+    }
+
+    .content__historia {
+        width: 100%;
+        padding-top: 6.5512rem;
+        position: relative;
+
+        @media ($mobile) {
+            padding-top: 3rem;
+        }
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 2.375rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+
+            }
+        }
+
+        .pre__text {
+            width: 100%;
+            max-width: 74.7%;
+
+            @media ($mobile) {
+                max-width: 16.1875rem;
+            }
+
+            p {
+                @include font-roboto(0.9375rem, 300);
+                color: $white;
+                line-height: 2rem;
+                white-space: pre-line;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
+            }
+        }
+
+        .btn__outline__white {
+            margin: 4rem 0 0;
+
+            @media($mobile) {
+                display: none;
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        bottom: 3.5688rem;
+        width: 100%;
+
+        @media ($mobile) {
+            bottom: 7rem;
+
+
+        }
+
+        .image__desktop {
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .image__mobile {
+            display: none;
+
+            @media ($mobile) {
+                display: block;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+
+            @media ($desktopLarge) {
+                height: 50%;
+                object-fit: contain;
+            }
+
+            @media ($mobile) {
+                height: 8.75rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.section__responsabilidade__institucional {
+    width: 100%;
+    margin-top: 6.0206rem;
+    padding-bottom: 7.7119rem;
+    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-responsabilidade-institucional.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    @media ($desktopLarge) {
+        background-size: 100%;
+    }
+
+    @media ($mobile) {
+        margin-top: 0;
+        background-size: auto;
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-responsabilidade-institucional.png);
+    }
+
+    .content__responsabilidade {
+        width: 100%;
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $primary;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 0.875rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+
+            }
+        }
+
+        h6 {
+            @include font-roboto(0.9375rem, 300);
+            color: $text;
+            text-align: center;
+
+            @media ($mobile) {
+                font-size: 0.875rem;
+            }
+        }
+
+        .inner__responsabilidade {
+            width: 100%;
+            max-width: 55.875rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 4.0625rem auto 0;
+
+            @media ($mobile) {
+                max-width: 100%;
+                margin-top: 1.9375rem;
+                justify-content: initial;
+            }
+
+            .box {
+                width: 27.4375rem;
+                background-color: $text;
+                height: 31.66rem;
+                padding: 2rem 2.75rem 0;
+                margin-bottom: 0.9831rem;
+
+                @media ($mobile) {
+                    width: 100%;
+                    height: 45.0975rem;
+                    padding: 1.3125rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &:first-child {
+                    .image {
+                        background-color: #F5F5EF;
+
+                        @media ($mobile) {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .image {
+                        padding-top: 1.25rem;
+                    }
+                }
+
+                &:nth-child(3n) {
+                    width: 100%;
+                    display: flex;
+                    height: 24.625rem;
+
+                    @media ($mobile) {
+                        flex-wrap: wrap;
+                        height: 100%;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .image {
+                        width: 40%;
+                        max-height: 12.875rem;
+                        align-self: center;
+                        margin: 0;
+                        position: relative;
+                        bottom: 1rem;
+
+                        @media ($mobile) {
+                            height: 7.6875rem;
+                            max-height: 100%;
+                            position: initial;
+                            align-self: initial;
+                        }
+                    }
+
+                    .description__box {
+                        width: 60%;
+
+                        @media ($mobile) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .image {
+                    width: 22.0625rem;
+                    min-height: 9.5625rem;
+                    display: flex;
+                    justify-content: center;
+
+                    .imagem__desktop {
+                        @media ($mobile) {
+                            display: none;
+                        }
+                    }
+
+                    .imagem__mobile {
+                        display: none;
+
+                        @media ($mobile) {
+                            display: flex;
+                            height: 7.75rem;
+                            width: auto;
+
+                            img {
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .description__box {
+
+                    @media ($mobile) {
+                        width: 100%;
+                    }
+
+                    h3 {
+                        @include font-ubuntu(1.5rem, 300);
+                        color: $white;
+                        text-transform: uppercase;
+                        margin: 2.0313rem 0 1.5rem;
+
+                        @media ($mobile) {
+                            font-size: 1.125rem;
+                            margin: 2rem 0 1.5813rem;
+                        }
+                    }
+
+                    .box__description {
+                        p {
+                            @include font-roboto(0.75rem, 300);
+                            color: $white;
+                            white-space: pre-line;
+                            line-height: 1.125rem;
+
+                            @media ($mobile) {
+                                font-size: 0.75rem;
+                                line-height: 1.125rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-nav {
+                position: absolute;
+                top: 38%;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                @media ($tabletMin) and ($tabletMax) {}
+
+                .owl-prev {
+                    position: relative;
+
+                    @media ($mobile) {
+                        left: - 2.5rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.875rem;
+                        height: 0.1875rem;
+                        background-color: $primary;
+                        position: absolute;
+                        transform: rotate(-50deg);
+                        top: -0.6875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(50deg);
+                        top: 0.6875rem;
+                    }
+                }
+
+                .owl-next {
+                    position: relative;
+
+                    @media ($mobile) {
+                        right: -.5rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.875rem;
+                        height: 0.1875rem;
+                        background-color: $primary;
+                        position: absolute;
+                        transform: rotate(50deg);
+                        top: -0.6875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(-50deg);
+                        top: 0.6875rem;
+                    }
+                }
+            }
+
+            .owl-dots {
+                bottom: -3.5rem;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                .owl-dot {
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    background-color: $border;
+                    border-radius: 100%;
+                    margin-right: 1rem;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active {
+                        background-color: $text;
+                    }
+
+                    &>button {
+                        border-radius: 100%;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section__conheca__institucional {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    height: 19.6875rem;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        @include font-ubuntu(2rem, 300);
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 2.4869rem;
+    }
+
+    .btn__outline_white {
+        margin: auto;
+    }
+}

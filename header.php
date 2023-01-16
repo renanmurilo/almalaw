@@ -10,11 +10,11 @@
 		<meta property="og:description" content="<?php bloginfo('name'); ?> <?php wp_title('-'); ?>"/>
 		<meta property="og:url" content="<?php bloginfo('url'); ?>"/>
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png"/>
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-16x16.png">
@@ -27,7 +27,7 @@
 		<!-- Final Wordpress Header -->
 	</head>
 
-	<?php $home = get_page_by_title('Home'); ?>
+	<!--?php $home = get_page_by_title('Home'); ?-->
 	<body>
 		<?php 
 		$idioma = get_locale();
@@ -37,7 +37,7 @@
 			<div class="shell">
 				<div class="content__menu">
                     <a href="<?php echo get_home_url(); ?>" class="logo">
-                        <img src="<?php the_field('logo_header', $home); ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Alma Law">
                     </a>
 
                     <a href="#" class="open__menu">
@@ -48,11 +48,15 @@
                     
                     <nav class="navbar">
 						<a href="" class="close__menu">
-							x
+							X
+						</a>
+
+						<a href="<?php echo get_home_url(); ?>" class="logo__mobile">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Alma Law">
 						</a>
 
 						<ul class="language">
-							<!--?php pll_the_languages(array('display_names_as'=>'slug')); ?-->
+							<?php pll_the_languages(array('display_names_as'=>'slug')); ?>
 						</ul>
 
                         <?php
@@ -63,7 +67,12 @@
                             );
                             wp_nav_menu( $args );
                         ?>
+
                     </nav>
+					
+					<ul class="language">
+						<?php pll_the_languages(array('display_names_as'=>'slug')); ?>
+					</ul>
                 </div>
 			</div>
 		</header>

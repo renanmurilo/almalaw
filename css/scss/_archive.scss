@@ -1,0 +1,209 @@
+.section__posts {
+    .wrapper__posts {
+        display: flex;
+        width: 100%;
+        margin-top: 3.6694rem;
+
+        .busca {
+            width: 38.8125rem;
+            position: relative;
+
+            @media ($mobile) {
+                width: 100%;
+            }
+
+            .searchandfilter {
+                width: 100%;
+                position: relative;
+
+                div>ul {
+                    width: 100%;
+
+                    li:last-child {
+
+                        input[type="submit"] {
+                            font-size: 0;
+                            position: absolute;
+                            top: 0;
+                            right: 1.25rem;
+                            bottom: 1.25rem;
+                            margin: auto;
+                            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMC41MyIgaGVpZ2h0PSIzMC41MyIgdmlld0JveD0iMCAwIDMwLjUzIDMwLjUzIj4KICA8ZyBpZD0iQnVzY2FyX0ljb25lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTM2OC4yNTIgLTM5Mi45NDMpIHJvdGF0ZSgtNDUpIj4KICAgIDxnIGlkPSJFbGlwc2VfNCIgZGF0YS1uYW1lPSJFbGlwc2UgNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjgwIDEyNTUpIiBmaWxsPSIjZmZmIiBzdHJva2U9IiM2MzEyNTIiIHN0cm9rZS13aWR0aD0iMyI+CiAgICAgIDxjaXJjbGUgY3g9IjkuNjQ3IiBjeT0iOS42NDciIHI9IjkuNjQ3IiBzdHJva2U9Im5vbmUiLz4KICAgICAgPGNpcmNsZSBjeD0iOS42NDciIGN5PSI5LjY0NyIgcj0iOC4xNDciIGZpbGw9Im5vbmUiLz4KICAgIDwvZz4KICAgIDxsaW5lIGlkPSJMaW5oYV8yMSIgZGF0YS1uYW1lPSJMaW5oYSAyMSIgeTE9IjEzLjUwNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjg5LjY0NyAxMjczLjUyMikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzYzMTI1MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPC9nPgo8L3N2Zz4K) no-repeat center;
+                            background-size: 100%;
+                            width: 2rem;
+                            height: 2rem;
+                            display: inline-block;
+                            vertical-align: middle;
+                            border: none;
+                        }
+                    }
+
+                    li {
+                        width: 100%;
+
+                        input[name='ofsearch'] {
+                            width: 100%;
+                            border-radius: 0;
+                            border: none;
+                            border-bottom: 0.0625rem solid #707070;
+                            height: 3rem;
+                            @include font-roboto(0.9375rem, 300);
+                            color: $primary;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content__posts {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto auto 7.5rem;
+
+        @media ($mobile) {
+            justify-content: center;
+        }
+
+        .inner__posts {
+            width: 100%;
+
+            .ajax-load-more-wrap {
+                width: 100%;
+            }
+
+            .alm-reveal {
+                margin-top: 7.5313rem;
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+
+                @media ($mobile) {
+                    justify-content: center;
+                }
+
+                .card {
+                    width: 21.75rem;
+                    height: 32.875rem;
+                    background-color: $text;
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+
+                    @media ($mobile) {
+                        margin: auto auto 1.5rem;
+                        width: 100%;
+                        height: 18.5625rem;
+                    }
+
+                    &:nth-child(3n) {
+                        margin-right: 0;
+
+                        @media ($mobile) {
+                            margin: auto auto 1.5rem;
+                        }
+                    }
+
+                    .image {
+                        height: 9.7112rem;
+                        width: 100%;
+                        max-width: 32.875rem;
+
+                        @media ($mobile) {
+                            width: 100%;
+                            height: 6.25rem;
+                            max-width: 100%;
+                        }
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+
+                            @media ($mobile) {
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .description {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 3.375rem 1.8125rem 0 2rem;
+
+                        @media ($mobile) {
+                            padding: 1.5rem 1.5rem 0;
+                        }
+
+
+                        h2 {
+                            @include font-ubuntu(1.5rem, 300);
+                            color: $white;
+                            margin-bottom: 1.375rem;
+                            line-height: 1.75rem;
+                            min-height: 3.4375rem;
+                            max-height: 3.4375rem;
+
+                            @media ($mobile) {
+                                font-size: 1rem;
+                                min-height: 2.25rem;
+                                max-height: 2.25rem;
+                                line-height: 1.125rem;
+                                margin-bottom: 0.75rem;
+                            }
+                        }
+
+                        p {
+                            @include font-roboto(0.9375rem, 300);
+                            color: $white;
+                            line-height: 1.75rem;
+
+                            @media ($mobile) {
+                                font-size: 0.625rem;
+                                line-height: 1rem;
+                            }
+                        }
+
+                        .btn__outline__white {
+                            margin: 3.5494rem auto 0;
+                            border-color: $white;
+                            color: $white;
+
+                            @media ($mobile) {
+                                margin: 1.4812rem auto 0;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .alm-btn-wrap {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .alm-load-more-btn {
+                    border: none;
+                    margin-top: 3.525rem;
+
+                    &.more {
+                        color: $primary;
+                        border-radius: 0;
+                        border: 0.0625rem solid $primary;
+                        @include font-roboto(1rem, 300);
+                        width: 12.5rem;
+                        height: 2.5rem;
+                        border-radius: 0;
+                        background: transparent;
+                    }
+
+                    &.done {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

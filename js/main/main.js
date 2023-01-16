@@ -4,6 +4,7 @@ let ico = document.querySelector('.hamburguer-line')
 let menu = document.querySelector('.menu')
 let closeMenu = document.querySelector('.close__menu')
 let language = document.querySelector('.language')
+let logo = document.querySelector('.logo__mobile')
 
 openMenu.addEventListener('click', (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ openMenu.addEventListener('click', (e) => {
     language.classList.toggle('active');
     openMenu.classList.toggle('active')
     menu.classList.toggle('active')
+    logo.classList.toggle('active')
 });
 
 closeMenu.addEventListener('click', (e) => {
@@ -21,6 +23,7 @@ closeMenu.addEventListener('click', (e) => {
     language.classList.toggle('active');
     closeMenu.classList.toggle('active')
     menu.classList.toggle('active');
+    logo.classList.toggle('active')
 })
 
 $('[data-group]').each(function () {
@@ -28,14 +31,21 @@ $('[data-group]').each(function () {
         $allClick = $(this).find('[data-click]'),
         activeClass = 'active';
 
+    $allTarget.first().addClass(activeClass);
+    $allClick.first().addClass(activeClass);
+    
+
     $allClick.click(function (e) {
         e.preventDefault();
+
+        $allTarget.removeClass(activeClass);
+        $allClick.removeClass(activeClass);
 
         var id = $(this).data('click'),
             $target = $('[data-target="' + id + '"]');
 
-        $target.toggleClass(activeClass);
-        $(this).toggleClass(activeClass)
+        $target.addClass(activeClass);
+        $(this).addClass(activeClass)
     });
 });
 
@@ -61,3 +71,10 @@ imagem.forEach((image) => {
 
     btnCookies.addEventListener('click', acceptCookies);
 })();
+
+$(document).ready(function(){
+    $('.row__wrapper__slide .btn__wrapper').click(function(){
+        $('.btn__wrapper').removeClass("active");
+        $(this).addClass("active");
+    });
+});

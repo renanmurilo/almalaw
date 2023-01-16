@@ -1,0 +1,310 @@
+.section__cabecalho {
+    width: 100%;
+    padding: 3.2188rem 0 3rem;
+    position: relative;
+
+    .bg-cabecalho {
+        background: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-cabecalho-2.png)no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        bottom: -36%;
+        width: 52.4375rem;
+        height: 21.875rem;
+        right: -21%;
+
+        @media ($mobile) {
+            display: none;
+        }
+    }
+
+    .before__page {
+        @include font-ubuntu(1.5rem, 300);
+        color: $primary;
+        text-transform: uppercase;
+        padding-bottom: 0.7813rem;
+        border-bottom: 0.0625rem solid $primary;
+
+        @media ($mobile) {
+            font-size: 1rem;
+            padding-bottom: 0.2813rem;
+        }
+    }
+
+    .wrapper__cabecalho {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.9375rem;
+
+        @media ($mobile) {
+            margin-top: 2.0313rem;
+        }
+
+        h1 {
+            @include font-ubuntu(2rem, 300);
+            line-height: 2.5rem;
+            text-transform: uppercase;
+            max-width: 24.75rem;
+            color: $primary;
+            margin-bottom: 1.6875rem;
+
+            @media ($mobile) {
+                font-size: 1.5rem;
+                max-width: 17.0625rem;
+                margin-bottom: 1.5313rem;
+                line-height: 2rem;
+            }
+        }
+
+        h2,
+        h3 {
+            @include font-roboto(1.25rem, 300);
+            color: $text;
+            line-height: 2rem;
+
+            @media ($mobile) {
+                font-size: 1rem;
+                line-height: 1.3125rem;
+            }
+        }
+    }
+}
+
+.section__descricao__post {
+    width: 100%;
+    padding-top: 3rem;
+    background: rgb(99, 18, 82);
+    background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+    background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+    background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#631252", endColorstr="#ffffff", GradientType=1);
+
+    @media ($mobile) {
+        background: rgb(99, 18, 82);
+        background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+        background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+        background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+    }
+
+    .content__descricao__post {
+        width: 100%;
+
+        .banner {
+            max-height: 26.375rem;
+            width: 100%;
+            margin: auto auto 5rem;
+            display: flex;
+            justify-content: center;
+
+            @media ($mobile) {
+                max-height: 12.25rem;
+                margin: auto auto 3.5rem;
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+
+                @media ($mobile) {
+                    height: 12.25rem;
+                }
+            }
+
+            iframe {
+                max-height: 26.375rem;
+                height: 26.375rem;
+                width: 100%;
+                max-width: 55.875rem;
+
+                @media ($mobile) {
+                    max-width: 100%;
+                    height: 12.25rem;
+                    max-height: 12.25rem;
+                }
+            }
+        }
+
+
+        .text__description {
+            width: 100%;
+            max-width: 55.875rem;
+            margin: auto auto 4rem;
+
+            @media ($mobile) {
+                max-width: 100%;
+                margin-bottom: 5.5rem;
+            }
+
+            p {
+                @include font-roboto(0.9375rem, 300);
+                color: $text;
+                line-height: 2rem;
+                white-space: pre-line;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+.section__ultimos__posts {
+    width: 100%;
+    background-color: $primary;
+    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-ultimas-publicacoes.png);
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media ($mobile) {
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-sinlge-post.png);
+    }
+
+    .content__ultimos__posts {
+        width: 100%;
+        padding: 4.5rem 0 4.3125rem;
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 3.25rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                text-align: center;
+            }
+        }
+
+        .inner__ultimos__posts {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            @media ($mobile) {
+                justify-content: center;
+            }
+
+            .card {
+                width: 21.75rem;
+                height: 32.875rem;
+                background-color: $white;
+                margin-right: 1rem;
+
+                @media ($mobile) {
+                    margin: auto auto 1.5rem;
+                    width: 100%;
+                    height: 18.5625rem;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 0;
+
+                    @media ($mobile) {
+                        margin: auto auto 1.5rem;
+                    }
+                }
+
+                .image {
+                    height: 9.7112rem;
+                    width: 100%;
+                    max-width: 32.875rem;
+
+                    @media ($mobile) {
+                        width: 100%;
+                        height: 6.25rem;
+                        max-width: 100%;
+                    }
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+
+                        @media ($mobile) {
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 3.375rem 1.8125rem 0 2rem;
+
+                    @media ($mobile) {
+                        padding: 1.5rem 1.5rem 0;
+                    }
+
+                    h2 {
+                        @include font-ubuntu(1.5rem, 300);
+                        color: $primary;
+                        margin-bottom: 1.375rem;
+                        line-height: 1.75rem;
+                        min-height: 3.4375rem;
+                        max-height: 3.4375rem;
+
+                        @media ($mobile) {
+                            font-size: 1rem;
+                            min-height: 2.25rem;
+                            max-height: 2.25rem;
+                            line-height: 1.125rem;
+                            margin-bottom: 0.75rem;
+                        }
+                    }
+
+                    p {
+                        @include font-roboto(0.9375rem, 300);
+                        color: $text;
+                        line-height: 1.75rem;
+
+                        @media ($mobile) {
+                            font-size: 0.625rem;
+                            line-height: 1rem;
+                        }
+                    }
+
+                    .btn__outline__white {
+                        margin: 3.5494rem auto 0;
+                        border-color: $primary;
+                        color: $primary;
+
+                        @media ($mobile) {
+                            margin: 1.4812rem auto 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.section__servicos__posts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $text;
+    padding: 5.625rem 0 6.8125rem;
+
+    @media ($mobile) {
+        padding: 3.75rem 0 5rem;
+    }
+
+    h2 {
+        @include font-ubuntu(2rem, 300);
+        color: $white;
+        text-align: center;
+        margin-bottom: 2.4869rem;
+
+        @media ($mobile) {
+            font-size: 1.5rem;
+            max-width: 17.5rem;
+        }
+    }
+}

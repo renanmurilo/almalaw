@@ -1,0 +1,303 @@
+.section__contato {
+    width: 100%;
+    padding: 6.1875rem 0 8.8125rem;
+    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-contato-e1673573674867.png);
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media ($desktopLarge) {
+        background-size: 100%;
+    }
+
+    @media ($mobile) {
+        background-image: none;
+        padding: 56px 0 0;
+        background: rgb(99, 18, 82);
+        background: -moz-linear-gradient(0deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 52%, rgba(255, 255, 255, 1) 52%);
+        background: -webkit-linear-gradient(0deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 52%, rgba(255, 255, 255, 1) 52%);
+        background: linear-gradient(0deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 52%, rgba(255, 255, 255, 1) 52%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#631252", endColorstr="#ffffff", GradientType=1);
+    }
+
+    .content__contato {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+
+
+        @media ($mobile) {
+            justify-content: flex-start;
+        }
+
+        .text__description {
+            width: 100%;
+            max-width: 35.5%;
+
+            @media ($mobile) {
+                max-width: 100%;
+            }
+
+            h1 {
+                @include font-ubuntu(2.5rem, 300);
+                color: $primary;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+
+                @media ($mobile) {
+                    font-size: 1.75rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            h3 {
+                @include font-roboto(0.9375rem, 300);
+                color: $text;
+                line-height: 2rem;
+                max-width: 95%;
+                margin-bottom: 4rem;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                    max-width: 17.5rem;
+                    margin-bottom: 1.7188rem;
+                }
+            }
+
+            .infos {
+                width: 100%;
+                border-top: 0.0625rem solid $primary;
+                padding-top: 2.5rem;
+                display: flex;
+                flex-wrap: wrap;
+
+                @media ($mobile) {
+                    padding-top: 2.2188rem;
+                }
+
+                a {
+                    @include font-roboto(1.5rem, 400);
+                    color: $primary;
+                    line-height: 2rem;
+                    margin-bottom: 0.625rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        margin-bottom: .5rem;
+                    }
+                }
+
+                p {
+                    @include font-roboto(1.5rem, 300);
+                    color: $text;
+                    line-height: 2rem;
+                    margin-bottom: 2rem;
+                    max-width: 17.3125rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        max-width: 11.5625rem;
+                        line-height: 1.3125rem;
+                    }
+
+                    &:last-child {
+                        max-width: 26.5rem;
+
+                        @media ($mobile) {
+                            max-width: 16.375rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .form__class {
+            width: 100%;
+            max-width: 56%;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            margin-bottom: 4.9375rem;
+
+            @media ($mobile) {
+                max-width: 100%;
+                justify-content: center;
+                margin-top: 2.5rem;
+            }
+
+            &::before {
+                content: '';
+                width: 41.5625rem;
+                height: 42rem;
+                background-color: $primary;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @media ($mobile) {
+                    display: none;
+                }
+            }
+
+            form {
+                width: 33.125rem;
+                margin-top: 4.8125rem;
+
+                @media ($mobile) {
+                    width: 100%;
+                }
+
+                .form__row {
+                    width: 100%;
+                    margin-bottom: 0.75rem;
+
+                    @media ($mobile) {
+                        margin-bottom: 1rem;
+                    }
+
+                    .form__controls {
+                        width: 100%;
+
+                        p {
+                            width: 100%;
+
+                            .field,
+                            .wpcf7-form-control {
+                                border: 0.0625rem solid $white;
+                                background-color: transparent;
+                                width: 100%;
+                                height: 3.5rem;
+                                padding-left: 1.5rem;
+                                @include font-roboto(0.9375rem, 300);
+                                color: $white;
+
+                                &::placeholder {
+                                    color: $white;
+                                }
+
+                                &[name="Mensagem"] {
+                                    padding-top: 1rem;
+                                    height: 10.0625rem;
+
+                                    @media ($mobile) {
+                                        height: 12.6875rem;
+                                    }
+                                }
+
+                                @media ($mobile) {
+                                    height: 2.3125rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn__outline__white {
+                    position: relative;
+                    margin: auto;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+.section__trabalhe__contato {
+    width: 100%;
+    background-color: $text;
+    position: relative;
+    height: 27.875rem;
+    overflow: hidden;
+
+    @media ($mobile) {
+        background-color: transparent;
+        padding-top: 5.5rem;
+        height: 100%;
+        background: rgb(50, 50, 50);
+        background: -moz-linear-gradient(0deg, rgba(50, 50, 50, 1) 0%, rgba(50, 50, 50, 1) 82%, rgba(255, 255, 255, 1) 82%);
+        background: -webkit-linear-gradient(0deg, rgba(50, 50, 50, 1) 0%, rgba(50, 50, 50, 1) 82%, rgba(255, 255, 255, 1) 82%);
+        background: linear-gradient(0deg, rgba(50, 50, 50, 1) 0%, rgba(50, 50, 50, 1) 82%, rgba(255, 255, 255, 1) 82%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323232", endColorstr="#ffffff", GradientType=1);
+    }
+
+    .bg-mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-contato.png);
+            background-size: cover;
+            background-position: left center;
+            position: absolute;
+            top: 0;
+            width: 54.8125rem;
+            height: 7.5rem;
+        }
+    }
+
+    .image__desktop {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @media ($desktopLarge) {
+            left: 15%;
+        }
+
+        @media ($mobile) {
+            display: none;
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .content__trabalhe {
+        width: 56.3%;
+        margin: 0 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media ($mobile) {
+            width: 100%;
+            padding-bottom: 5rem;
+        }
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $white;
+            text-transform: uppercase;
+            padding: 7.9375rem 0 2.375rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                padding: 4rem 0 2rem;
+            }
+        }
+
+        p {
+            @include font-roboto(15px, 300);
+            color: $white;
+            line-height: 2rem;
+
+            @media ($mobile) {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                max-width: 17.5rem;
+            }
+        }
+    }
+}

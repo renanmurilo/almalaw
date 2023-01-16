@@ -8,7 +8,7 @@
         wp_register_script( 'jquery', get_template_directory_uri() . '/js/libs/jquery.js', [], "3.4.1", true );
 
         // Rigistra o plugin do slider
-        wp_register_script( 'plugins-script', get_template_directory_uri() . '/js/plugins/slick.min.js', ['jquery'], false, true);
+        wp_register_script( 'plugins-script', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', ['jquery'], false, true);
         
         // Registrar Main
         wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', ['jquery', 'plugins-script'], false, true );
@@ -19,14 +19,11 @@
     add_action( 'wp_enqueue_scripts', 'almalaw_scripts' );
 
     function almalaw_css() {
-        wp_register_style( 'merito-style', get_template_directory_uri() . '/style.css', [], false, false );
+        wp_register_style( 'almalaw-style', get_template_directory_uri() . '/style.css', [], false, false );
     
-        wp_register_style('slick', get_template_directory_uri() . '/js/plugins/slick.css', [], false, false);
-
-        wp_register_style('slick-theme', get_template_directory_uri() . '/js/plugins/slick-theme.css', [], false, false);
+        wp_register_style('owl-carousel', get_template_directory_uri() . '/js/plugins/owl.carousel.min.css', [], false, false);
     
-       wp_enqueue_style( 'slick' );
-        wp_enqueue_style( 'slick-theme' );
+        wp_enqueue_style( 'owl-carousel' );
         wp_enqueue_style( 'almalaw-style' );
     }
     add_action( 'wp_enqueue_scripts', 'almalaw_css' );
@@ -51,5 +48,20 @@
         register_nav_menu('menu-principal',__( 'Menu Principal' ));
     }
     add_action( 'init', 'register_my_menu' );
-    
+
+   function teo_remove_sticky( $query = false ) {
+
+	    // Verifica se a consulta está sendo realizada na front-page ou na home
+        if ( @is_front_page() || @is_home() ) { 
+            // Remove os sticky posts da consulta (posts fixos)
+            $query->set(
+                'post__not_in',
+                get_option( 'sticky_posts' )
+            );
+        }
+
+    } // teo_remove_sticky
+
+    // Adiciona a ação
+    add_action('pre_get_posts','teo_remove_sticky');
 ?>

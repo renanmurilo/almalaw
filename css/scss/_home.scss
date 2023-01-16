@@ -1,0 +1,954 @@
+.section__home__banner {
+    width: 100%;
+
+    .content__banner {
+        width: 100%;
+
+        .banner__image {
+            width: 100%;
+
+            .banner__desktop {
+                @media ($mobile) {
+                    display: none;
+                }
+            }
+
+            .banner__mobile {
+                display: none;
+
+                @media ($mobile) {
+                    display: block;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+        .owl-dots {
+            bottom: 2.1875rem;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+
+            .owl-dot {
+                width: 0.9375rem;
+                height: 0.9375rem;
+                background-color: $white;
+                opacity: .5;
+                border-radius: 100%;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+
+                &>button {
+                    border-radius: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section__home__nos__somos {
+    width: 100%;
+    height: 100%;
+
+    @media ($mobile) {
+        position: relative;
+    }
+
+    .content__nos__somos {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        padding: 3.965rem 0 0;
+
+        @media ($tabletMin) and ($tabletMax) {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 3.8225rem 0 0;
+        }
+
+        @media ($mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 53.5rem;
+        }
+
+        .description__nos__somos {
+            width: 49.3%;
+
+            @media ($tabletMin) and ($tabletMax) {
+                margin-right: 4rem;
+            }
+
+            @media ($mobile) {
+                width: 100%;
+            }
+
+            h2 {
+                @include font-ubuntu(2.5rem, 300);
+                color: $primary;
+                text-transform: uppercase;
+                margin-bottom: 2.375rem;
+
+                @media ($tabletMin) and ($tabletMax) {
+                    font-size: 1.75rem;
+                }
+
+                @media ($mobile) {
+                    font-size: 1.75rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .description {
+                width: 100%;
+                white-space: pre-line;
+
+                p {
+                    @include font-roboto(0.9375rem, 300);
+                    color: $text;
+                    line-height: 2rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                    }
+                }
+            }
+
+            .btn__outline__primary {
+                margin-top: 4.375rem;
+
+                @media ($mobile) {
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+
+        .box__purple__desk {
+            height: 41.875rem;
+            width: 24.6875rem;
+            background-color: $primary;
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .image__desk {
+            position: absolute;
+            right: -8.75rem;
+            top: 5.775rem;
+
+            @media ($mobile) {
+                display: none;
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    .box__purple__mobile {
+        display: none;
+
+        @media ($mobile) {
+            background-color: $primary;
+            display: block;
+            width: 24rem;
+            max-width: 24rem;
+            position: absolute;
+            bottom: 35rem;
+            right: 0;
+            height: 12.4375rem;
+        }
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 25rem;
+            height: 20.875rem;
+            margin-right: 0;
+        }
+
+        img {
+
+            @media ($mobile) {
+                object-fit: cover;
+                width: 22rem;
+                max-width: 22rem;
+                height: 20.875rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .content__explicativo {
+        width: 100%;
+        margin-top: 4.0625rem;
+        background-color: $text;
+        height: 30.2712rem;
+        display: flex;
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-home-nos.png);
+        background-position: left center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media ($mobile) {
+            background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-nos.png);
+            margin-top: 2.5387rem;
+            background-position: bottom center;
+        }
+
+        .text {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding-top: 4.375rem;
+
+            @media ($mobile) {
+                padding-top: 10.1875rem;
+                justify-content: flex-start;
+            }
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $white;
+                width: 51%;
+                line-height: 2.5rem;
+                align-self: center;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    align-self: flex-start;
+                    width: 88%;
+                }
+            }
+        }
+    }
+}
+
+.section__home__reconhecimento {
+    width: 100%;
+    margin: 4.8569rem auto 3.7662rem;
+
+    @media ($mobile) {
+        margin: 3.9613rem auto 1rem;
+    }
+
+    .content__reconhecimento {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media ($mobile) {
+            justify-content: center;
+        }
+
+        .images__reconhecimento {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 46%;
+            margin: 0;
+
+            @media ($mobile) {
+                max-width: 100%;
+                order: 1;
+                justify-content: center;
+                height: 15.125rem;
+
+                .owl-stage {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .image {
+                max-width: 8.75rem;
+                max-height: 8.9375rem;
+                margin-right: 2.5625rem;
+                margin-bottom: 3.0625rem;
+
+                @media ($mobile) {
+                    margin: auto;
+                    max-height: 100%;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 0;
+
+                    @media ($mobile) {
+                        margin: auto;
+                    }
+
+                    img {
+                        height: 143px;
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+
+                    @media ($mobile) {
+                        height: 100%;
+                    }
+                }
+            }
+
+            .owl-nav {
+                position: absolute;
+                top: 45%;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                @media ($tabletMin) and ($tabletMax) {}
+
+                .owl-prev {
+                    position: relative;
+
+                    @media ($mobile) {
+                        left: -1rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.875rem;
+                        height: 0.1875rem;
+                        background-color: $primary;
+                        position: absolute;
+                        transform: rotate(-50deg);
+                        top: -0.6875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(50deg);
+                        top: 0.6875rem;
+                    }
+                }
+
+                .owl-next {
+                    position: relative;
+
+                    @media ($mobile) {
+                        right: 1rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.875rem;
+                        height: 0.1875rem;
+                        background-color: $primary;
+                        position: absolute;
+                        transform: rotate(50deg);
+                        top: -0.6875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(-50deg);
+                        top: 0.6875rem;
+                    }
+                }
+            }
+
+            .owl-dots {
+                bottom: -3.5rem;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                .owl-dot {
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    background-color: $white;
+                    opacity: .5;
+                    border-radius: 100%;
+                    margin-right: 1rem;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    &>button {
+                        border-radius: 100%;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .text__reconhecimento {
+            width: 100%;
+            max-width: 41%;
+
+            @media ($mobile) {
+                max-width: 100%;
+                order: 0;
+                margin-bottom: 6.25rem;
+            }
+
+            h2 {
+                @include font-ubuntu(2.5rem, 300);
+                color: $primary;
+                text-transform: uppercase;
+                margin-bottom: 2.375rem;
+
+                @media ($mobile) {
+                    font-size: 1.75rem;
+                    margin-bottom: 2rem;
+                    text-align: left;
+                }
+            }
+
+            p {
+                @include font-roboto(1rem, 300);
+                color: $text;
+                line-height: 1.5rem;
+                margin-top: 1.375rem;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
+            }
+
+            .btn__outline__primary {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}
+
+.section__home__atuacao {
+    width: 100%;
+    border-top: 1.4375rem solid $primary;
+    padding-bottom: 7.5rem;
+    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-atuacao-home.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media($desktopLarge) {
+        background-size: 100%;
+    }
+
+    @media ($mobile) {
+        border-top: 4.0362rem solid $primary;
+        background-size: contain;
+        padding-bottom: 5.3669rem;
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-atuacao.png);
+    }
+
+    .content__atuacao {
+        width: 100%;
+        padding-top: 3.3125rem;
+        height: 100%;
+
+        @media ($mobile) {
+            padding-top: 4.0025rem;
+        }
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $primary;
+            text-transform: uppercase;
+            text-align: center;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                text-align: left;
+            }
+        }
+
+        .description__atuacao {
+            margin-top: 3.625rem;
+            margin-bottom: 5.9219rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-height: 14rem;
+            flex-wrap: wrap;
+
+            @media ($mobile) {
+                max-height: 100%;
+                margin: 2rem auto 3.2412rem;
+            }
+
+            .limitador {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                display: flex;
+                white-space: pre-line;
+                max-width: 83.2%;
+                margin: auto;
+
+                @media ($mobile) {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    max-width: 100%;
+                }
+
+                p {
+                    @include font-roboto(0.9375rem, 300);
+                    color: $text;
+                    max-width: 49%;
+                    line-height: 2rem;
+
+                    @media ($mobile) {
+                        max-width: 100%;
+                        line-height: 1.25rem;
+                        font-size: 0.875rem;
+                    }
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .icones__atuacao {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 5.1875rem;
+
+            @media ($mobile) {
+                flex-wrap: wrap;
+                margin: auto auto 0.75rem;
+            }
+
+            .icone {
+                max-width: 5.625rem;
+
+                @media ($mobile) {
+                    margin: 0 .5rem;
+                    max-width: 5rem;
+                    margin-bottom: 2.4375rem;
+                }
+
+                &:nth-child(6) {
+                    max-width: 7.125rem;
+
+                    @media ($mobile) {
+                        max-width: 5.2rem;
+                    }
+                }
+
+                &:nth-child(8) {
+                    max-width: 8rem;
+
+                    @media ($mobile) {
+                        max-width: 6rem;
+                    }
+                }
+
+                img {
+                    width: 5.0625rem;
+                    height: 5.3125rem;
+                    object-fit: cover;
+                }
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    @include font-roboto(1rem, 400);
+                    color: $primary;
+                    text-align: center;
+                    margin-top: 0.4375rem;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+
+        .btn__outline__primary {
+            margin: auto;
+        }
+    }
+}
+
+.section__home__sobre {
+    width: 100%;
+    background-color: $text;
+    height: 31.5625rem;
+    position: relative;
+
+    @media ($mobile) {
+        height: 100%;
+    }
+
+    .content__sobre {
+        padding-top: 7.0625rem;
+        width: 100%;
+
+        @media ($mobile) {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 2.375rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .description {
+            width: 100%;
+            max-width: 51%;
+
+            @media ($mobile) {
+                max-width: 100%;
+            }
+
+            p {
+                @include font-roboto(0.9375rem, 300);
+                color: $white;
+                line-height: 2rem;
+
+                @media ($mobile) {
+                    line-height: 1.25rem;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+
+        .btn__outline__white {
+            margin: 2.5rem 0;
+
+            @media ($mobile) {
+                margin: 2.5rem 0 0;
+            }
+        }
+    }
+
+    .image {
+        width: 100%;
+        max-width: 42.7%;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
+
+        @media ($mobile) {
+            display: none;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 31.5625rem;
+            height: 100%;
+        }
+    }
+}
+
+.section__home__blog {
+    width: 100%;
+    background-color: $primary;
+    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-home-blog.png);
+    background-position: bottom center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media($desktopLarge) {
+        background-size: 100%;
+    }
+
+    @media ($mobile) {
+        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-publicacoes.png);
+    }
+
+    .content__blog {
+        padding: 6.8125rem 0 12.25rem;
+
+        @media ($mobile) {
+            padding: 4rem 0 8.1188rem;
+        }
+
+        h2 {
+            @include font-ubuntu(2.5rem, 300);
+            color: $white;
+            text-transform: uppercase;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    .inner__blog {
+        width: 100%;
+        display: flex;
+        margin-top: 3.25rem;
+
+        @media ($mobile) {
+            margin-top: 2.4956rem;
+            justify-content: center;
+        }
+
+        .card {
+            width: 21.75rem;
+            height: 32.875rem;
+            background-color: $white;
+
+            @media ($mobile) {
+                width: 17.5rem;
+                height: 20.5625rem;
+                margin: auto;
+            }
+
+            .image {
+                height: 9.7112rem;
+                width: 100%;
+
+                @media ($mobile) {
+                    height: 6.25rem;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+
+                    @media ($mobile) {
+                        height: 6.25rem;
+                    }
+                }
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3.375rem 1.8125rem 0 2rem;
+
+                @media ($mobile) {
+                    padding: 1.5rem 1.5rem 0;
+                    height: 100%;
+                }
+
+                h2 {
+                    @include font-ubuntu(1.5rem, 300);
+                    color: $primary;
+                    margin-bottom: 1.375rem;
+                    line-height: 1.75rem;
+                    min-height: 3.4375rem;
+                    max-height: 3.4375rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.125rem;
+                        min-height: 2.25rem;
+                        max-height: 2.25rem;
+                        margin-bottom: 0.7681rem;
+                    }
+                }
+
+                p {
+                    @include font-roboto(0.9375rem, 300);
+                    color: $text;
+                    line-height: 1.75rem;
+
+                    @media ($mobile) {
+                        font-size: 0.625rem;
+                        line-height: 1rem;
+                    }
+
+                }
+
+                .btn__outline__white {
+                    margin: 3.5494rem auto 0;
+                    border-color: $primary;
+                    color: $primary;
+
+                    @media ($mobile) {
+                        margin-top: 1.4819rem;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 45%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            @media ($mobile) {
+                top: 33%;
+            }
+
+            .owl-prev {
+                left: -4.5rem;
+                position: relative;
+
+                @media ($mobile) {
+                    left: -2rem;
+                }
+
+                span {
+                    display: none;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    width: 1.875rem;
+                    height: 0.1875rem;
+                    background-color: $border;
+                    position: absolute;
+                    transform: rotate(-50deg);
+                    top: -0.6875rem;
+
+                    @media ($mobile) {
+                        width: 1.8125rem;
+                        top: 0;
+                        background-color: $white;
+                    }
+                }
+
+                &::after {
+                    transform: rotate(50deg);
+                    top: 0.6875rem;
+
+                    @media ($mobile) {
+                        top: 1.3rem;
+                    }
+                }
+            }
+
+            .owl-next {
+                right: -2.5rem;
+                position: relative;
+
+                @media ($mobile) {
+                    right: 0rem;
+                }
+
+                span {
+                    display: none;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    width: 1.875rem;
+                    height: 0.1875rem;
+                    background-color: $border;
+                    position: absolute;
+                    transform: rotate(50deg);
+                    top: -0.6875rem;
+
+                    @media ($mobile) {
+                        width: 1.8125rem;
+                        top: 0;
+                        background-color: $white;
+                    }
+                }
+
+                &::after {
+                    transform: rotate(-50deg);
+                    top: 0.6875rem;
+
+                    @media ($mobile) {
+                        top: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        .owl-dots {
+            bottom: -3rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .owl-dot {
+                width: 0.9375rem;
+                height: 0.9375rem;
+                background-color: $white;
+                opacity: .5;
+                border-radius: 100%;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+
+                &>button {
+                    border-radius: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
