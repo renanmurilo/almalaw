@@ -50,7 +50,7 @@ $(document).ready(function() {
         URLhashListener:true,
         autoplayHoverPause:true,
         startPosition: 'URLHash',
-        autoWidth: true
+        autoWidth: true,
     });
 })
 

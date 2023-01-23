@@ -161,7 +161,7 @@
         background-color: $text;
         width: 100%;
         margin-top: 2.5rem;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-institucional-servicos.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-institucional-servicos.png);
         background-repeat: no-repeat;
         background-position: right center;
         background-size: contain;
@@ -169,7 +169,7 @@
         @media ($mobile) {
             background-size: 100%;
             background-position: bottom center;
-            background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-institu.png);
+            background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-mobile-institu.png);
         }
 
         .text {
@@ -356,7 +356,7 @@
 
     &::after {
         content: '';
-        background: url(http://almalaw.local/wp-content/uploads/2023/01/background-institucional-historia.png)no-repeat center;
+        background: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-institucional-historia.png)no-repeat center;
         background-size: contain;
         width: 33.0625rem;
         position: absolute;
@@ -472,19 +472,19 @@
     width: 100%;
     margin-top: 6.0206rem;
     padding-bottom: 7.7119rem;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-responsabilidade-institucional.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com/wp-content/uploads/2023/01/background-responsabilidade-institucional.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
 
     @media ($desktopLarge) {
-        background-size: 100%;
+        background-size: 65%;
     }
 
     @media ($mobile) {
         margin-top: 0;
         background-size: auto;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-responsabilidade-institucional.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com/wp-content/uploads/2023/01/fundo-mobile-responsabilidade-institucional.png);
     }
 
     .content__responsabilidade {
@@ -553,12 +553,6 @@
                     }
                 }
 
-                &:nth-child(2) {
-                    .image {
-                        padding-top: 1.25rem;
-                    }
-                }
-
                 &:nth-child(3n) {
                     width: 100%;
                     display: flex;
@@ -603,8 +597,14 @@
                     justify-content: center;
 
                     .imagem__desktop {
+                        width: auto;
+
                         @media ($mobile) {
                             display: none;
+                        }
+
+                        img {
+                            object-fit: cover;
                         }
                     }
 
@@ -639,7 +639,7 @@
 
                         @media ($mobile) {
                             font-size: 1.125rem;
-                            margin: 2rem 0 1.5813rem;
+                            margin: 1rem 0 1.5813rem;
                         }
                     }
 
@@ -649,6 +649,10 @@
                             color: $white;
                             white-space: pre-line;
                             line-height: 1.125rem;
+
+                            a {
+                                text-decoration: underline;
+                            }
 
                             @media ($mobile) {
                                 font-size: 0.75rem;

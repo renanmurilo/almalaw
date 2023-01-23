@@ -6,10 +6,21 @@
 
         .banner__image {
             width: 100%;
+            position: relative;
 
             .banner__desktop {
+                height: 35.125rem;
+
+                @media ($desktopLarge) {
+                    height: 100%;
+                }
+
                 @media ($mobile) {
                     display: none;
+                }
+
+                img {
+                    object-fit: cover;
                 }
             }
 
@@ -25,7 +36,89 @@
                 object-fit: cover;
                 width: 100%;
             }
+
+            .description {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 100%;
+
+                h3 {
+                    width: 100%;
+                    line-height: 2rem;
+                    display: flex;
+                    @include font-roboto(1.5rem, 300);
+                    color: $white;
+                    margin-left: calc(50% + 3.75rem);
+                    margin-bottom: 0.5rem;
+
+                    @media ($mobile) {
+                        margin-left: 2.9375rem;
+                        font-size: 1rem;
+                        margin-top: 12.5rem;
+                        margin-bottom: 0;
+                        line-height: 1.3125rem;
+                    }
+                }
+
+                h2 {
+                    width: 100%;
+                    @include font-ubuntu(2.875rem, 300);
+                    color: $white;
+                    text-transform: uppercase;
+                    display: flex;
+                    margin-left: calc(50% + 3.75rem);
+                    line-height: 3.3125rem;
+
+                    @media ($mobile) {
+                        font-size: 2rem;
+                        margin-left: 2.9375rem;
+                        max-width: 240px;
+                        line-height: 2.3125rem;
+                    }
+                }
+
+                .text {
+                    width: 100%;
+                    display: flex;
+                    margin-left: calc(50% + 3.75rem);
+                    margin-top: 1rem;
+
+                    @media ($mobile) {
+                        margin-left: 2.9375rem;
+                        margin-top: .5rem;
+                    }
+
+                    p {
+                        @include font-roboto(1rem, 300);
+                        color: $white;
+                        line-height: 1.5rem;
+                        max-width: 24.5625rem;
+
+                        @media ($mobile) {
+                            font-size: 0.75rem;
+                            line-height: 1.25rem;
+                            max-width: 17.625rem;
+                        }
+                    }
+                }
+
+                .btn__outline__white {
+                    margin-left: calc(50% + 3.75rem);
+                    margin-top: 3.75rem;
+
+                    @media ($mobile) {
+                        margin-top: 1.875rem;
+                        margin-left: 2.9375rem;
+                    }
+                }
+            }
         }
+
 
         .owl-dots {
             bottom: 2.1875rem;
@@ -103,8 +196,7 @@
             h2 {
                 @include font-ubuntu(2.5rem, 300);
                 color: $primary;
-                text-transform: uppercase;
-                margin-bottom: 2.375rem;
+                margin: 1.3rem 0 2.375rem;
 
                 @media ($tabletMin) and ($tabletMax) {
                     font-size: 1.75rem;
@@ -113,6 +205,7 @@
                 @media ($mobile) {
                     font-size: 1.75rem;
                     margin-bottom: 2rem;
+                    margin-top: 0;
                 }
             }
 
@@ -176,7 +269,7 @@
             width: 24rem;
             max-width: 24rem;
             position: absolute;
-            bottom: 35rem;
+            bottom: 33rem;
             right: 0;
             height: 12.4375rem;
         }
@@ -189,7 +282,7 @@
             position: absolute;
             display: block;
             right: 0;
-            bottom: 25rem;
+            bottom: 23rem;
             height: 20.875rem;
             margin-right: 0;
         }
@@ -212,13 +305,13 @@
         background-color: $text;
         height: 30.2712rem;
         display: flex;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-home-nos.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-home-nos.png);
         background-position: left center;
         background-size: contain;
         background-repeat: no-repeat;
 
         @media ($mobile) {
-            background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-nos.png);
+            background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-mobile-nos.png);
             margin-top: 2.5387rem;
             background-position: bottom center;
         }
@@ -310,10 +403,18 @@
 
                     @media ($mobile) {
                         margin: auto;
+                        height: 6.25rem;
+                        max-width: 90%;
                     }
 
                     img {
                         height: 143px;
+
+                        @media ($mobile) {
+                            height: 100px;
+                            object-fit: cover;
+                            width: 90%;
+                        }
                     }
                 }
 
@@ -322,14 +423,16 @@
                     width: 100%;
 
                     @media ($mobile) {
-                        height: 100%;
+                        height: 8.75rem;
+                        object-fit: contain;
+                        width: 100%;
                     }
                 }
             }
 
             .owl-nav {
                 position: absolute;
-                top: 45%;
+                top: 50%;
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
@@ -434,7 +537,7 @@
             @media ($mobile) {
                 max-width: 100%;
                 order: 0;
-                margin-bottom: 6.25rem;
+                margin-bottom: 2.5rem;
             }
 
             h2 {
@@ -473,7 +576,7 @@
     width: 100%;
     border-top: 1.4375rem solid $primary;
     padding-bottom: 7.5rem;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-atuacao-home.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com/wp-content/uploads/2023/01/background-atuacao-home.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -486,7 +589,7 @@
         border-top: 4.0362rem solid $primary;
         background-size: contain;
         padding-bottom: 5.3669rem;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-atuacao.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com/wp-content/uploads/2023/01/background-mobile-atuacao.png);
     }
 
     .content__atuacao {
@@ -564,6 +667,10 @@
             width: 100%;
             margin-bottom: 5.1875rem;
 
+            @media ($desktopLarge) {
+                margin-bottom: 10rem;
+            }
+
             @media ($mobile) {
                 flex-wrap: wrap;
                 margin: auto auto 0.75rem;
@@ -573,7 +680,7 @@
                 max-width: 5.625rem;
 
                 @media ($mobile) {
-                    margin: 0 .5rem;
+                    margin: 0 auto;
                     max-width: 5rem;
                     margin-bottom: 2.4375rem;
                 }
@@ -706,7 +813,7 @@
 .section__home__blog {
     width: 100%;
     background-color: $primary;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-home-blog.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-home-blog.png);
     background-position: bottom center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -716,7 +823,7 @@
     }
 
     @media ($mobile) {
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/background-mobile-publicacoes.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-mobile-publicacoes.png);
     }
 
     .content__blog {
@@ -844,7 +951,7 @@
                 position: relative;
 
                 @media ($mobile) {
-                    left: -2rem;
+                    left: -2.5rem;
                 }
 
                 span {
@@ -856,7 +963,7 @@
                     content: '';
                     width: 1.875rem;
                     height: 0.1875rem;
-                    background-color: $border;
+                    background-color: $white;
                     position: absolute;
                     transform: rotate(-50deg);
                     top: -0.6875rem;
@@ -883,7 +990,7 @@
                 position: relative;
 
                 @media ($mobile) {
-                    right: 0rem;
+                    right: -.5rem;
                 }
 
                 span {
@@ -895,7 +1002,7 @@
                     content: '';
                     width: 1.875rem;
                     height: 0.1875rem;
-                    background-color: $border;
+                    background-color: $white;
                     position: absolute;
                     transform: rotate(50deg);
                     top: -0.6875rem;

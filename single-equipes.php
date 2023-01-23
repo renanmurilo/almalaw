@@ -39,7 +39,7 @@
                         <div class="redes">
                             <a href="<?php the_field('cartao_digital'); ?>" class="btn btn__outline__primary" download>Baixar cartão digital</a>
 
-                            <a href="http://<?php the_field('link_do_linkedin'); ?>" target="_blank" rel="noopener noreferrer">
+                            <a href="<?php the_field('link_do_linkedin'); ?>" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/Linkedin_Icone_PaginaEquipe.svg" alt="">
                             </a>
                         </div>

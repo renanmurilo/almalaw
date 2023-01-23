@@ -25,11 +25,17 @@
             }
 
             .btn__outline__primary {
+                @media ($mobile) {
+                    margin-right: 0.5625rem;
+                    margin-bottom: 0.625rem;
+                }
+
                 &:nth-child(2) {
                     margin: 0 2.5rem;
 
                     @media ($mobile) {
-                        margin: auto auto 0.625rem;
+                        margin: auto 0 0.625rem;
+                        margin-right: .625rem;
                     }
                 }
             }
@@ -276,7 +282,7 @@
 .section__blog__noticias {
     width: 100%;
     padding: 5.995rem 0 7.5rem;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-noticias.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-noticias.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -287,7 +293,7 @@
 
     @media ($mobile) {
         padding: 4rem 0 4.375rem;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-content-noticias.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-mobile-content-noticias.png);
     }
 
     .content__noticias {
@@ -423,7 +429,7 @@
     width: 100%;
     background-color: $text;
     padding-bottom: 7.5rem;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-publicacoes.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-publicacoes.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -434,7 +440,7 @@
 
     @media ($mobile) {
         padding-bottom: 8.75rem;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-publicacoes.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-mobile-publicacoes.png);
     }
 
     .content__publicacoes {
@@ -576,7 +582,7 @@
 .section__blog__videos {
     padding: 7.0625rem 0 7.5625rem;
     width: 100%;
-    background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-noticias.png);
+    background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-noticias.png);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -587,7 +593,7 @@
 
     @media ($mobile) {
         padding: 4rem 0 4.375rem;
-        background-image: url(http://almalaw.local/wp-content/uploads/2023/01/fundo-mobile-content-noticias.png);
+        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-mobile-content-noticias.png);
     }
 
     .content__videos {

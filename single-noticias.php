@@ -8,7 +8,7 @@
                 <div class="content__cabecalho"> 
                     <?php if ($idioma === 'pt_BR') : ?>
                     <a href="<?php echo get_home_url(); ?>/noticias" class="before__page">
-                        Noticias
+                        Notícias
                     </a>
 
                     <div class="wrapper__cabecalho">

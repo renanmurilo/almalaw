@@ -1,7 +1,17 @@
 
+<?php $blog = get_page_by_title('Alma Contents'); ?>
+<?php $idioma = get_locale();?>
 <?php get_header(); ?>
     <main>
-
+        <section class="section__banner">
+            <div class="content__banner">
+                <div class="image">
+                    <img class="banner__desktop" src="<?php the_field('banner', $blog); ?>" alt="<?php the_title(); ?>">
+                    <img class="banner__mobile" src="<?php the_field('banner_mobile', $blog); ?>" alt="<?php the_title(); ?>">
+                </div>
+            </div>
+        </section>
+        
         <section class="section__posts">
             <div class="shell">
                 <div class="wrapper__posts">

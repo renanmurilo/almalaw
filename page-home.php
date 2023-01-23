@@ -8,10 +8,29 @@ get_header();
             <section class="section__home__banner">
                 <div class="content__banner slide-banners">
                     <?php if(have_rows('banners')): while(have_rows('banners')) : the_row(); ?>
-                        <a href="<?php the_sub_field('link_do_banner'); ?>" class="banner__image">
-                            <img class="banner__desktop" src="<?php the_sub_field('imagem'); ?>" alt="">
-                            <img class="banner__mobile" src="<?php the_sub_field('imagem_mobile'); ?>" alt="">
-                        </a>
+                        <div class="banner__image">
+                            <img class="banner__desktop" src="<?php the_sub_field('imagem'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+                            <img class="banner__mobile" src="<?php the_sub_field('imagem_mobile'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+                            
+                            <div class="description">
+                                <h3><?php the_sub_field('titulo_menor'); ?></h3>
+                                <h2><?php the_sub_field('titulo'); ?></h2>
+
+                                <div class="text">
+                                    <?php the_sub_field('texto'); ?>
+                                </div>
+                                
+                                <?php if ($idioma === 'pt_BR') : ?>
+                                <a href="<?php the_sub_field('link_do_banner'); ?>" class="btn btn__outline__white" style="<?php echo ( get_sub_field('mostrar_botao') ? "display: flex;" : "display: none;") ;?>">
+                                    Saiba mais
+                                </a>
+                                <?php elseif ($idioma === 'en_US') : ?>
+                                <a href="<?php the_sub_field('link_do_banner'); ?>" class="btn btn__outline__white" style="<?php echo ( get_sub_field('mostrar_botao') ? "display: flex;" : "display: none;") ;?>">
+                                    Know more
+                                </a>
+                                <?php endif ?>
+                            </div>
+                        </div>
                     <?php endwhile; else : endif; ?>
                 </div>
             </section>
