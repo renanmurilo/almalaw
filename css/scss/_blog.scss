@@ -21,7 +21,7 @@
             flex-wrap: wrap;
 
             @media ($mobile) {
-                justify-content: flex-start;
+                justify-content: center;
             }
 
             .btn__outline__primary {
