@@ -57,8 +57,9 @@
                 @media ($mobile) {
                     width: 100%;
                     margin-bottom: 1.4925rem;
-                    margin-right: 0;
-                    justify-content: space-between;
+                    margin-right: auto;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
                 }
 
                 &:nth-child(2n) {
@@ -99,15 +100,20 @@
 
                     @media ($mobile) {
                         width: auto;
+                        margin: 0;
+                        padding-left: 1rem;
                     }
                 }
 
                 .text {
                     max-width: 14.625rem;
+                    align-self: baseline;
 
                     @media ($mobile) {
-                        max-width: 11rem;
+                        width: 100%;
+                        max-width: 100%;
                         margin-left: 1rem;
+                        margin-top: 2rem;
                     }
 
                     .name {
@@ -119,6 +125,21 @@
                         @media ($mobile) {
                             font-size: 1.125rem;
                             line-height: 1.3125rem;
+                        }
+                    }
+
+                    .description {
+                        @include font-roboto(1rem, 300);
+                        color: $text;
+                        line-height: 1.5rem;
+                        margin-top: 1rem;
+                        max-width: 16.0625rem;
+                        min-height: 8.8125rem;
+
+                        @media ($mobile) {
+                            max-width: 17.5rem;
+                            font-size: 0.875rem;
+                            line-height: 1.25rem;
                         }
                     }
                 }
@@ -134,7 +155,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/background-servicos-reconhe.png);
+    background-image: url(https://almalaw.com.br//wp-content/uploads/2023/01/background-servicos-reconhe.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +163,7 @@
     background-color: $primary;
 
     @media ($mobile) {
-        background-image: url(http://almalawdev.infinityfreeapp.com//wp-content/uploads/2023/01/fundo-mobile-servicos-reconhecimento.png);
+        background-image: url(https://almalaw.com.br//wp-content/uploads/2023/01/fundo-mobile-servicos-reconhecimento.png);
         background-position: center bottom;
         background-size: 100%;
         height: 15.1875rem;

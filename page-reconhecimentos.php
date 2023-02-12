@@ -28,6 +28,9 @@ get_header();
                                 </div>
                                 <div class="text">
                                     <p class="name"><?php the_sub_field('nome'); ?></p>
+                                    <div class="description">
+                                        <?php the_sub_field('texto'); ?>
+                                    </div>
                                 </div>
                             </div>
                             <?php endwhile; else : endif; ?>

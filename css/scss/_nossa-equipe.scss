@@ -13,7 +13,9 @@
             @include font-ubuntu(2.5rem, 300);
             color: $primary;
             text-transform: uppercase;
-            margin-bottom: 2rem;
+            max-width: 50.1875rem;
+            margin: auto auto 2rem;
+
 
             @media ($mobile) {
                 font-size: 1.75rem;
@@ -22,7 +24,8 @@
 
         .description {
             width: 100%;
-            max-width: 48.1875rem;
+            max-width: 50.1875rem;
+            margin: auto;
 
             @media ($mobile) {
                 max-width: 18.875rem;
@@ -64,7 +67,7 @@
         .equipe__destaque {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
 
             @media ($mobile) {
@@ -77,6 +80,10 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                &:nth-child(2) {
+                    margin: 0 1rem;
+                }
 
                 @media ($mobile) {
                     margin-bottom: 3rem;
@@ -125,6 +132,7 @@
             max-width: 50.1875rem;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin: auto auto 4rem;
 
             @media ($mobile) {
@@ -148,7 +156,7 @@
                     margin-right: 0;
 
                     @media ($mobile) {
-                        margin: auto;
+                        margin: auto auto 3rem;
                     }
                 }
 

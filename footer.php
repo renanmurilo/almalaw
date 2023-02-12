@@ -33,8 +33,8 @@
                         </div>
 
                         <div class="phone">
-                            <a href="tel:+" class="link"><?php the_field('telefone', $home); ?></a>
                             <a href="mailto:" class="link"><?php the_field('email', $home); ?></a>
+                            <a href="tel:+" class="link"><?php the_field('telefone', $home); ?></a>
                         </div>
                     </div>
 
@@ -79,13 +79,13 @@
                     <?php if ($idioma === 'pt_BR') : ?>
                     <div class="text">
                         <h3>ESTE SITE USA COOKIES</h3>
-                        <p class="msg-cookies">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                        <p class="msg-cookies">Usamos cookies no nosso site para ver como você interage com ele. Ao aceitar, você concorda com o uso de cookies. </p>
                     </div>
                     <button class="btn btn__outline__white btn-cookies">Eu aceito</button>
                     <?php elseif ($idioma === 'en_US') : ?> 
                      <div class="text">
                         <h3>THIS SITE USES COOKIES</h3>
-                        <p class="msg-cookies">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                        <p class="msg-cookies">We use cookies on our website to see how you interact with it. By accepting, you agree to the use of cookies. </p>
                     </div>
                     <button class="btn btn__outline__white btn-cookies">I accept</button>
                     <?php endif ?>

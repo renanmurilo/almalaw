@@ -14,6 +14,52 @@ get_header();
                 </div>
             </section>
 
+            <section class="section__escritorio">
+                <div class="image">
+                    <img src="<?php the_field('imagem_escritorio'); ?>" alt="">
+                </div>
+                
+                <div class="shell">
+                    <div class="content__escritorio">
+                        <h2><?php the_field('titulo_escritorio'); ?></h2>
+                        <div class="text__description">
+                            <?php the_field('texto_escritorio'); ?>
+                        </div>
+                    </div>
+
+                    <div class="inner__escritorio" data-group="services">
+                        <?php if ($idioma === 'pt_BR') : ?>
+                            <div class="wrapper__buttons">
+                                <a href="" data-click="Tributário" class="btn__accordeon">Tributário</a>
+                                <a href="" data-click="Societário, contratos e empresarial" class="btn__accordeon">Societário, contratos e empresarial</a>
+                                <a href="" data-click="Títulos de dívida, Fundos de investimento e Mercado de Capitais" class="btn__accordeon">Títulos de dívida, Fundos de investimento e Mercado de Capitais</a>
+                                <a href="" data-click="Infraestrutura e regulatório" class="btn__accordeon">Infraestrutura e regulatório</a>
+                                <a href="" data-click="Governança corporativa" class="btn__accordeon">Governança corporativa</a>
+                            </div>
+                        <?php elseif ($idioma === 'en_US') : ?>
+                            <div class="wrapper__buttons">
+                                <a href="" data-click="Tributary" class="btn__accordeon">Tributary</a>
+                                <a href="" data-click="Corporate, contracts and business" class="btn__accordeon">Corporate, contracts and business</a>
+                                <a href="" data-click="Debt Securities, Investment Funds and Capital Markets" class="btn__accordeon">Debt Securities, Investment Funds and Capital Markets</a>
+                                <a href="" data-click="Infrastructure and regulatory" class="btn__accordeon">Infrastructure and regulatory</a>
+                                <a href="" data-click="Corporate governance" class="btn__accordeon">Corporate governance</a>
+                            </div>
+                        <?php endif ?>
+
+                        <div class="box__escritorio">
+                            <?php if(have_rows('conteudos_escritorio')): while(have_rows('conteudos_escritorio')) : the_row(); ?>
+                            <div class="box" data-target="<?php the_sub_field('titulo'); ?>">
+                                <h3><?php the_sub_field('titulo'); ?></h3>
+                                <div class="text">
+                                    <?php the_sub_field('texto'); ?>
+                                </div>
+                            </div>
+                            <?php endwhile; else : endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="section__atuacao">
                 <div class="shell">
                     <div class="content__atuacao">
@@ -125,52 +171,6 @@ get_header();
                             </div>
                         </div>
                         <?php endwhile; else : endif; ?>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section__escritorio">
-                <div class="image">
-                    <img src="<?php the_field('imagem_escritorio'); ?>" alt="">
-                </div>
-                
-                <div class="shell">
-                    <div class="content__escritorio">
-                        <h2><?php the_field('titulo_escritorio'); ?></h2>
-                        <div class="text__description">
-                            <?php the_field('texto_escritorio'); ?>
-                        </div>
-                    </div>
-
-                    <div class="inner__escritorio" data-group="services">
-                        <?php if ($idioma === 'pt_BR') : ?>
-                            <div class="wrapper__buttons">
-                                <a href="" data-click="Tributário" class="btn__accordeon">Tributário</a>
-                                <a href="" data-click="Societário, contratos e empresarial" class="btn__accordeon">Societário, contratos e empresarial</a>
-                                <a href="" data-click="Títulos de dívida, Fundos de investimento e Mercado de Capitais" class="btn__accordeon">Títulos de dívida, Fundos de investimento e Mercado de Capitais</a>
-                                <a href="" data-click="Infraestrutura e regulatório" class="btn__accordeon">Infraestrutura e regulatório</a>
-                                <a href="" data-click="Governança corporativa" class="btn__accordeon">Governança corporativa</a>
-                            </div>
-                        <?php elseif ($idioma === 'en_US') : ?>
-                            <div class="wrapper__buttons">
-                                <a href="" data-click="Tributary" class="btn__accordeon">Tributary</a>
-                                <a href="" data-click="Corporate, contracts and business" class="btn__accordeon">Corporate, contracts and business</a>
-                                <a href="" data-click="Debt Securities, Investment Funds and Capital Markets" class="btn__accordeon">Debt Securities, Investment Funds and Capital Markets</a>
-                                <a href="" data-click="Infrastructure and regulatory" class="btn__accordeon">Infrastructure and regulatory</a>
-                                <a href="" data-click="Corporate governance" class="btn__accordeon">Corporate governance</a>
-                            </div>
-                        <?php endif ?>
-
-                        <div class="box__escritorio">
-                            <?php if(have_rows('conteudos_escritorio')): while(have_rows('conteudos_escritorio')) : the_row(); ?>
-                            <div class="box" data-target="<?php the_sub_field('titulo'); ?>">
-                                <h3><?php the_sub_field('titulo'); ?></h3>
-                                <div class="text">
-                                    <?php the_sub_field('texto'); ?>
-                                </div>
-                            </div>
-                            <?php endwhile; else : endif; ?>
-                        </div>
                     </div>
                 </div>
             </section>
