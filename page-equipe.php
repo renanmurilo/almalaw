@@ -45,7 +45,7 @@ get_header();
                     <div class="shell">
                         <div class="membros__equipe">
                             <?php if(have_rows('equipe')): while(have_rows('equipe')) : the_row(); ?>
-                            <a href="<?php the_sub_field('link_do_perfil'); ?>" class="card">
+                            <a href="/<?php the_sub_field('link_do_perfil'); ?>" class="card">
                                 <div class="image">
                                     <img src="<?php the_sub_field('foto'); ?>" alt="<?php the_sub_field('nome'); ?>">
                                 </div>
@@ -66,7 +66,7 @@ get_header();
                 </a>
                 <?php elseif ($idioma === 'en_US') : ?>
                 <h2>KNOW OUR SERVICES</h2>
-                <a href="<?php echo get_home_url(); ?>/atuacao" class="btn btn__outline__white">
+                <a href="<?php echo get_home_url(); ?>/activities" class="btn btn__outline__white">
                     Know more
                 </a>
                 <?php endif ?>

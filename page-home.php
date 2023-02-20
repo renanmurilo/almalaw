@@ -44,8 +44,11 @@ get_header();
                             <div class="description">
                                 <?php the_field('descricao_nos_somos'); ?>
                             </div>
-
-                            <a href="<?php echo get_home_url(); ?>/nossa-equipe" class="btn btn__outline__primary">Saiba mais</a>
+                            <?php if ($idioma === 'pt_BR') : ?>
+                            <a href="<?php echo get_home_url(); ?>/institucional" class="btn btn__outline__primary">Saiba mais</a>
+                            <?php elseif ($idioma === 'en_US') : ?>
+                            <a href="<?php echo get_home_url(); ?>/institutional" class="btn btn__outline__primary">Know more</a>
+                            <?php endif ?>
                         </div>
                         
                         <div class="box__purple__desk"></div>
@@ -103,9 +106,15 @@ get_header();
                             <p><?php the_field('paragrafo_1'); ?></p>
                             <p><?php the_field('paragrafo_2'); ?></p>
 
-                            <a href="<?php echo get_home_url(); ?>/institucional" class="btn btn__outline__primary">
+                            <?php if ($idioma === 'pt_BR') : ?>
+                            <a href="<?php echo get_home_url(); ?>/reconhecimentos" class="btn btn__outline__primary">
                                 Saiba mais
                             </a>
+                            <?php elseif ($idioma === 'en_US') : ?>
+                            <a href="<?php echo get_home_url(); ?>/recognition" class="btn btn__outline__primary">
+                                Know more
+                            </a>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
@@ -135,7 +144,7 @@ get_header();
                             Saiba mais
                         </a>
                         <?php elseif ($idioma === 'en_US') : ?>
-                        <a href="<?php echo get_home_url(); ?>/atuacao" class="btn btn__outline__primary">
+                        <a href="<?php echo get_home_url(); ?>/activities" class="btn btn__outline__primary">
                             Know more
                         </a>
                         <?php endif ?>
@@ -151,11 +160,11 @@ get_header();
                             <?php the_field('descricao_sobre'); ?>
                         </div>
                         <?php if ($idioma === 'pt_BR') : ?>
-                        <a href="<?php echo get_home_url(); ?>" class="btn btn__outline__white">
+                        <a href="<?php echo get_home_url(); ?>/nossa-equipe" class="btn btn__outline__white">
                             Saiba mais
                         </a>
                         <?php elseif ($idioma === 'en_US') : ?>
-                        <a href="<?php echo get_home_url(); ?>" class="btn btn__outline__white">
+                        <a href="<?php echo get_home_url(); ?>/our-team" class="btn btn__outline__white">
                             Know more
                         </a>
                         <?php endif ?>

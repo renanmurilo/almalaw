@@ -33,7 +33,7 @@
             <div class="bg-cabecalho"></div>
         </section>
 
-        <section class="section__descricao__post">
+        <section class="section__descricao__post <?php echo ( get_field('mostrar_background') ? "active" : "") ;?>">
             <div class="shell">
                 <div class="content__descricao__post">
                     <div class="banner">
@@ -83,7 +83,7 @@
             </a>
             <?php elseif ($idioma === 'en_US') : ?>
             <h2>KNOW OUR SERVICES</h2>
-            <a href="<?php echo get_home_url(); ?>/atuacao" class="btn btn__outline__white">
+            <a href="<?php echo get_home_url(); ?>/activities" class="btn btn__outline__white">
                 Know more
             </a>
              <?php endif ?>

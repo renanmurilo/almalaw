@@ -77,4 +77,15 @@ $(document).ready(function(){
         $('.btn__wrapper').removeClass("active");
         $(this).addClass("active");
     });
+
+    const post = document.querySelector('main')
+    // console.log(post);
+
+    if (post.classList.contains('post')) {
+        const imagem = document.querySelector('.content__descricao__post .banner img')
+
+        if (imagem.getAttribute('src') === '') {
+            imagem.remove()
+        }
+    }
 });

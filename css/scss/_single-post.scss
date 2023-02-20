@@ -11,6 +11,7 @@
         width: 52.4375rem;
         height: 21.875rem;
         right: -21%;
+        z-index: -1;
 
         @media ($mobile) {
             display: none;
@@ -44,7 +45,7 @@
             @include font-ubuntu(2rem, 300);
             line-height: 2.5rem;
             text-transform: uppercase;
-            max-width: 24.75rem;
+            max-width: 48.75rem;
             color: $primary;
             margin-bottom: 1.6875rem;
 
@@ -73,17 +74,20 @@
 .section__descricao__post {
     width: 100%;
     padding-top: 3rem;
-    background: rgb(99, 18, 82);
-    background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
-    background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
-    background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#631252", endColorstr="#ffffff", GradientType=1);
 
-    @media ($mobile) {
+    &.active {
         background: rgb(99, 18, 82);
-        background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
-        background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
-        background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+        background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+        background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+        background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 21.5%, rgba(255, 255, 255, 1) 21.5%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#631252", endColorstr="#ffffff", GradientType=1);
+
+        @media ($mobile) {
+            background: rgb(99, 18, 82);
+            background: -moz-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+            background: -webkit-linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+            background: linear-gradient(180deg, rgba(99, 18, 82, 1) 0%, rgba(99, 18, 82, 1) 7%, rgba(255, 255, 255, 1) 7%);
+        }
     }
 
     .content__descricao__post {

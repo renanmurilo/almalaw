@@ -118,7 +118,7 @@
             </a>
             <?php elseif ($idioma === 'en_US') : ?>
             <h2>KNOW OUR SERVICES</h2>
-            <a href="<?php echo get_home_url(); ?>/atuacao" class="btn btn__outline__white">
+            <a href="<?php echo get_home_url(); ?>/activities" class="btn btn__outline__white">
                 Know more
             </a>
             <?php endif ?>

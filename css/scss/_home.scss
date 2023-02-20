@@ -53,7 +53,7 @@
                     display: flex;
                     @include font-roboto(1.5rem, 300);
                     color: $white;
-                    margin-left: calc(50% + 3.75rem);
+                    margin-left: calc(50% + 2rem);
                     margin-bottom: 0.5rem;
 
                     @media ($mobile) {
@@ -71,7 +71,7 @@
                     color: $white;
                     text-transform: uppercase;
                     display: flex;
-                    margin-left: calc(50% + 3.75rem);
+                    margin-left: calc(50% + 2rem);
                     line-height: 3.3125rem;
 
                     @media ($mobile) {
@@ -85,7 +85,7 @@
                 .text {
                     width: 100%;
                     display: flex;
-                    margin-left: calc(50% + 3.75rem);
+                    margin-left: calc(50% + 2rem);
                     margin-top: 1rem;
 
                     @media ($mobile) {
@@ -108,7 +108,7 @@
                 }
 
                 .btn__outline__white {
-                    margin-left: calc(50% + 3.75rem);
+                    margin-left: calc(50% + 2rem);
                     margin-top: 3.75rem;
 
                     @media ($mobile) {

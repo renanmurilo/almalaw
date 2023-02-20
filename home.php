@@ -18,11 +18,11 @@
                         <?php if ($idioma === 'pt_BR') : ?>
                         <a href="<?php echo get_home_url(); ?>/noticias" class="btn btn__outline__primary">Notícias</a>
                         <a href="<?php echo get_home_url(); ?>/publicacoes" class="btn btn__outline__primary">Publicações</a>
-                        <a href="<?php echo get_home_url(); ?>/videos_e_podcasts" class="btn btn__outline__primary">Vídeos e podcasts</a>
+                        <!-- <a href="<?php echo get_home_url(); ?>/videos_e_podcasts" class="btn btn__outline__primary">Vídeos e podcasts</a> -->
                         <?php elseif ($idioma === 'en_US') : ?>
                         <a href="<?php echo get_home_url(); ?>/news" class="btn btn__outline__primary">News</a>
                         <a href="<?php echo get_home_url(); ?>/publications" class="btn btn__outline__primary">Publications</a>
-                        <a href="<?php echo get_home_url(); ?>/videos-and-podcasts" class="btn btn__outline__primary">Videos and podcasts</a>
+                        <!-- <a href="<?php echo get_home_url(); ?>/videos-and-podcasts" class="btn btn__outline__primary">Videos and podcasts</a> -->
                         <?php endif ?>
                     </div>
 
@@ -117,7 +117,7 @@
             </div>
         </section>
 
-        <section class="section__blog__videos">
+        <!--section class="section__blog__videos">
             <div class="shell">
                 <div class="content__videos">
                    <div class="widget">
@@ -146,6 +146,6 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section-->
     </main>
 <?php get_footer(); ?>

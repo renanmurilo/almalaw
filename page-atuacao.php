@@ -183,7 +183,7 @@ get_header();
                 </a>
                 <?php elseif ($idioma === 'en_US') : ?>
                 <h2>GET TO KNOW ALMA LAW</h2>
-                <a href="<?php echo get_home_url(); ?>/institucional" class="btn btn__outline__white">
+                <a href="<?php echo get_home_url(); ?>/institutional" class="btn btn__outline__white">
                     Know more
                 </a>
                 <?php endif ?>

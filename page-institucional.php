@@ -2,6 +2,7 @@
 // Template Name: Institucional
 get_header();
 ?>
+    <?php $idioma = get_locale();?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
         <main>
             <section class="section__banner">
@@ -145,10 +146,17 @@ get_header();
             </section>          
 
             <section class="section__servicos__reconhecimento">
+                <?php if ($idioma === 'pt_BR') : ?>
                 <h2>Conheça nossos serviços</h2>
                 <a href="<?php echo get_home_url(); ?>/atuacao" class="btn btn__outline__white">
                     Saiba mais
                 </a>
+                <?php elseif ($idioma === 'en_US') : ?>
+                <h2>Discover our services</h2>
+                <a href="<?php echo get_home_url(); ?>/activities" class="btn btn__outline__white">
+                    know more
+                </a>
+                <?php endif ?>
             </section>  
         </main>
     <?php } } ?>
