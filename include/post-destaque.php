@@ -6,7 +6,7 @@
         </div>
 
         <div class="description">
-            <h2><?php echo substr(get_the_title(), 0, 40); ?></h2>
+            <h2><?php echo substr(get_the_title(), 0, 40); ?>...</h2>
 
             <p><?php $excerpt = get_field('texto'); echo substr($excerpt, 0, 234); ?></p>
 

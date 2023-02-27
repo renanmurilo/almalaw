@@ -90,6 +90,7 @@
                     background-color: $text;
                     margin-right: 1rem;
                     margin-bottom: 1rem;
+                    position: relative;
 
                     @media ($mobile) {
                         margin: auto auto 1.5rem;
@@ -159,6 +160,13 @@
                             color: $white;
                             line-height: 1.75rem;
 
+                            span {
+                                @include font-roboto(0.9375rem, 300);
+                                color: $white;
+                                font-weight: 300 !important;
+                                line-height: 1.75rem;
+                            }
+
                             @media ($mobile) {
                                 font-size: 0.625rem;
                                 line-height: 1rem;
@@ -166,9 +174,11 @@
                         }
 
                         .btn__outline__white {
-                            margin: 3.5494rem auto 0;
+                            margin: 0 auto 0;
                             border-color: $white;
                             color: $white;
+                            position: absolute;
+                            bottom: 3.125rem;
 
                             @media ($mobile) {
                                 margin: 1.4812rem auto 0;

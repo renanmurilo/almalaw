@@ -127,6 +127,13 @@
                             line-height: 2rem;
                             max-width: 28.3125rem;
 
+                            span {
+                                @include font-roboto(0.9375rem, 300);
+                                color: $white;
+                                font-weight: 300 !important;
+                                line-height: 1.75rem;
+                            }
+
                             @media ($mobile) {
                                 font-size: 0.875rem;
                                 line-height: 1.25rem;
@@ -338,6 +345,7 @@
                 height: 32.875rem;
                 background-color: $primary;
                 margin-right: 1rem;
+                position: relative;
 
                 @media ($mobile) {
                     margin: auto auto 1.5rem;
@@ -406,6 +414,13 @@
                         color: $white;
                         line-height: 1.75rem;
 
+                        span {
+                            @include font-roboto(0.9375rem, 300);
+                            color: $white;
+                            font-weight: 300 !important;
+                            line-height: 1.75rem;
+                        }
+
                         @media ($mobile) {
                             font-size: 0.625rem;
                             line-height: 1rem;
@@ -413,7 +428,9 @@
                     }
 
                     .btn__outline__white {
-                        margin: 3.5494rem auto 0;
+                        margin: 0 auto 0;
+                        position: absolute;
+                        bottom: 3.125rem;
 
                         @media ($mobile) {
                             margin: 1.4812rem auto 0;
@@ -490,6 +507,7 @@
                 height: 32.875rem;
                 background-color: $white;
                 margin-right: 1rem;
+                position: relative;
 
                 @media ($mobile) {
                     margin: auto auto 1.5rem;
@@ -558,6 +576,13 @@
                         color: $text;
                         line-height: 1.75rem;
 
+                        span {
+                            @include font-roboto(0.9375rem, 300);
+                            color: $white;
+                            font-weight: 300 !important;
+                            line-height: 1.75rem;
+                        }
+
                         @media ($mobile) {
                             font-size: 0.625rem;
                             line-height: 1rem;
@@ -565,9 +590,11 @@
                     }
 
                     .btn__outline__white {
-                        margin: 3.5494rem auto 0;
+                        margin: 0 auto 0;
                         border-color: $primary;
                         color: $primary;
+                        position: absolute;
+                        bottom: 3.125rem;
 
                         @media ($mobile) {
                             margin: 1.4812rem auto 0;
@@ -634,6 +661,7 @@
                 height: 32.875rem;
                 background-color: $primary;
                 margin-right: 1rem;
+                position: relative;
 
                 @media ($mobile) {
                     margin: auto auto 1.5rem;
@@ -702,6 +730,13 @@
                         color: $white;
                         line-height: 1.75rem;
 
+                        span {
+                            @include font-roboto(0.9375rem, 300);
+                            color: $white;
+                            font-weight: 300 !important;
+                            line-height: 1.75rem;
+                        }
+
                         @media ($mobile) {
                             font-size: 0.625rem;
                             line-height: 1rem;
@@ -709,7 +744,9 @@
                     }
 
                     .btn__outline__white {
-                        margin: 3.5494rem auto 0;
+                        margin: 0 auto 0;
+                        position: absolute;
+                        bottom: 3.125rem;
 
                         @media ($mobile) {
                             margin: 1.4812rem auto 0;

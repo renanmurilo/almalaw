@@ -916,6 +916,13 @@
                     color: $text;
                     line-height: 1.75rem;
 
+                    span {
+                        @include font-roboto(0.9375rem, 300);
+                        color: $white;
+                        font-weight: 300 !important;
+                        line-height: 1.75rem;
+                    }
+
                     @media ($mobile) {
                         font-size: 0.625rem;
                         line-height: 1rem;
