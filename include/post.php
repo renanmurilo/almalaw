@@ -6,9 +6,9 @@
         </div>
 
         <div class="description">
-            <h2><?php echo substr(get_the_title(), 0, 40); ?>...</h2>
+            <h2><?php the_field('titulo_destaque'); ?></h2>
 
-            <p><?php $excerpt = get_field('texto'); echo substr($excerpt, 0, 160), '...'; ?></p>
+            <p><?php $excerpt = get_field('texto'); echo substr($excerpt, 0, 150), '...'; ?></p>
 
             <?php if ($idioma === 'pt_BR') : ?>
                 <a href="<?php the_permalink(); ?>" class="btn btn__outline__white">
